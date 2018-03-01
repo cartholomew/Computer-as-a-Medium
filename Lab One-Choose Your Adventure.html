@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>
+Choose Your Own Adventure
+</title>
+</head>
+<style>
+  body{
+    background-color: #800000;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+<body>
+</body>
+<script>
+  var name = prompt ("What is your name?");
+  var greeting = "Hello ";
+
+  greeting += name;
+  document.write("<p>" + greeting + "</p>");
+
+  var story = "You are a heterosexual male on your way to the club with your girlfriend. There seems to be a lot of people waiting to enter the club, but there's an alleyway that will take you closer to the front. Do you: \n1. Wait in line \n2. Go through the alleyway";
+  var path = prompt(story);
+  var morals = 0;
+  var life = 0;
+
+  console.log("user chose: " + path);
+  document.write("<p>" + story + "</p><p> You chose: " + path + "</p>");
+
+  console.log(typeof path);
+  path = Number(path);
+  console.log(typeof path);
+  if (path === 1)
+  {
+    //Waiting in line
+    story = "How polite of you to wait in line like everyone else. Your girlfriend on the other hand seems to be getting more and more annoyed as time goes by. Do you: \n1. Assure her that you will make it into the club soon \n2. Sacrifice her to the gods so you can get into the club faster";
+    morals = prompt(story);
+    console.log("user chose: " + morals);
+    document.write("<p>" + story + "</p><p> You chose: " + morals + "</p>");
+  }
+  else {
+    //Going down the alleyway
+    story = "Why wait in line when there is a perfectly good alleyway right here? You've made it through a ways before you realize a horde of shifty characters coming at you from your North, East, and West. Do you: \n1. Satisfy your fragile masculinity and take them on \n2. Satisfy your will to live and abandon your girlfriend, escaping South";
+    life = prompt(story);
+    console.log("user chose: " + life);
+    document.write("<p>" + story + "</p><p> You chose " + life + "</p>");
+  }
+
+  morals = Number(morals);
+  life = Number(life);
+
+  if (morals === 1)
+  {
+    story = "You're such a good boyfriend, reassuring her like that, but she doesn't buy it and pushes you into moving traffic. ¯\\_(ツ)_/¯";
+    document.write("<p>" + story + "</p>");
+  }
+  else if (morals === 2)
+  {
+    story = "You take your sacrificial dagger out of your fanny pack and swing at her, only to trip and fall straight into the knife yourself. The line dissappears, allowing your girlfriend to enter the club almost instantly. Lucky her!";
+    document.write("<p>" + story + "</p>");
+  }
+
+  if (life === 1)
+  {
+    story = "Real mean don't run from a fight! You charge forward at the first character, but lose your footing and stumble head first into a conspicuosly placed jagged rock in the middle of the alley. Your girlfriend on the other hand walks right by them. Turns out they were all trying to grab the jagged rock so that no one would trip over it, not trying to attack you. Whoops ¯\\_(ツ)_/¯";
+    document.write("<p>" + story + "</p>");
+  }
+  else if (life === 2)
+  {
+    story = "Your turn to run, only to be swung back around by your enfuriated girlfriend, who not only hates feeling abandoned, but also studied 10 years of krav maga (contact-combat). You fill in the blanks";
+    document.write("<p>" + story + "</p>");
+  }
+
+</script>
+</html>

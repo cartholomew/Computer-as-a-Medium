@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>DOM Example</title>
+</head>
+<body>
+  <ol id="drinkList">
+    <li id="coffeeID">Coffee</li>
+    <li>Tea</li>
+  </ol>
+  <script>
+    var liElements = document.getElementsByTagName("li");
+    console.log(liElements);
+
+    var node = document.createElement("li");
+    node.innerHTML = "Soda";
+    //var textNode = document.createTextNode("Soda");
+    //node.appendChild(textNode);
+
+    var list = document.getElementById("drinkList");
+    console.log(list.firstElementChild);
+    list.replaceChild(node, list.firstElementChild);
+  </script>
+</body>
+</html>

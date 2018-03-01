@@ -1,0 +1,628 @@
+<html>
+<head>
+  <title>Zelda Quiz</title>
+  <style>
+    body
+    {
+      background: url("http://i1262.photobucket.com/albums/ii619/cartholomew/Untitled-4_zpsxdb3fwqk.jpg");
+      background-repeat:repeat;
+      background-size: 20%;
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 16px;
+      color: #ffffef;
+    }
+    #container{
+      position: relative;
+      top: 80px;
+      background-color: #a2d530;
+      margin: auto;
+      width: 600px;
+      border-radius: 10px;
+      border: 15px #ed7f20 solid;
+      box-shadow: -5px 40px 50px #00768d;
+    }
+    form{
+      margin: auto;
+      padding: 30px;
+    }
+    img{
+      border-radius: 10px;
+      max-width: 600px;
+    }
+    #kms{
+      position:absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+      background-color: #ed7f20;
+      border-bottom: 25px #ed7f20 solid;
+      box-shadow: 0px 5px 50px #00769d;
+    }
+    #goron{
+      position:fixed;
+      bottom: -5px;
+      right: 50px;
+      z-index: 1;
+      filter: drop-shadow(0px -5px 10px #00769d);
+    }
+    #result{
+      margin: auto;
+      padding: 30px;
+    }
+    #quizButton{
+      position:relative;
+      left: 33%;
+      margin: 4px 2px;
+      padding: 15px 30px;
+      font-size: 20px;
+      text-align: center;
+      background-color: #ed7f20;
+      border: 5px #ffffef solid;
+      filter: drop-shadow(0px 0px 10px #ffffff);
+    }
+    label:hover, input:hover
+    {
+      cursor: url(http://cur.cursors-4u.net/games/gam-10/gam932.ani), url(http://cur.cursors-4u.net/games/gam-10/gam932.png), progress !important;
+    }
+    body
+    {
+      cursor: url(http://cur.cursors-4u.net/games/gam-10/gam952.ani), url(http://cur.cursors-4u.net/games/gam-10/gam952.png), progress !important;
+    }
+  </style>
+</head>
+<body>
+  <img src="http://zs.ffshrine.org/album/minish-cap/sprites/BiggoronMoving.gif" id="goron">
+<div id= "kms"><h1>Which Legend of Zelda "Helper" are You?</h1></div>
+<div id= "container">
+  <form>
+    <img src="http://i0.kym-cdn.com/photos/images/newsfeed/001/227/156/5f3.gif">
+    <br>
+    1) Are you male or female?
+    <blockquote>
+      <input type="radio" name="gender" id="male" value="Male">
+      <label for="male">Male</label>
+      <br>
+      <input type="radio" name="gender" id="female" value="Female">
+      <label for="female">Female</label>
+      <br>
+      <input type="radio" name="gender" id="nonGen" value="Non-binary">
+      <label for="nonGen">Non-binary conforming</label>
+      <br>
+      <input type="radio" name="gender" id="noId" value="No Id">
+      <label for="noId">Prefer not to identify</label>
+      <br>
+    </blockquote>
+    <img src="https://78.media.tumblr.com/d20def6d75731d07856f2f0ed74d57c6/tumblr_o0okp2nOrx1tc0tabo1_r1_540.gif">
+    <br>
+    2) What color do you like best?
+    <blockquote>
+      <input type="radio" name="color" id="blue" value="Blue">
+      <label for="blue">Blue</label>
+      <br>
+      <input type="radio" name="color" id="red" value="Red">
+      <label for="red">Red</label>
+      <br>
+      <input type="radio" name="color" id="yellow" value="Yellow">
+      <label for="yellow">Yellow</label>
+      <br>
+      <input type="radio" name="color" id="purple" value="Purple">
+      <label for="purple">Purple</label>
+    </blockquote>
+    <br>
+    <img src="http://i.imgur.com/zCTGJ1q.gif">
+    <br>
+    3) How do you get the attention of a significant other?
+    <blockquote>
+      <input type="radio" name="attention" id="looks" value="Looks">
+      <label for="looks">Your looks</label>
+      <br>
+      <input type="radio" name="attention" id="giggles" value="Giggles">
+      <label for="giggles">Giggles</label>
+      <br>
+      <input type="radio" name="attention" id="talk" value="Talking">
+      <label for="talk">By talking to them</label>
+      <br>
+      <input type="radio" name="attention" id="yell" value="Yelling">
+      <label for="yell">By yelling at them</label>
+      <br>
+    </blockquote>
+    <br>
+    <img src="https://cdn.weasyl.com/static/media/9d/70/a8/9d70a8295c36e97c770d67ef8b7aed8839dd861e534869f173ef118d60013a15.gif">
+    <br>
+    4) Which ability would you want the most?
+    <blockquote>
+      <input type="radio" name="ability" id="fly" value="Fly">
+      <label for="fly">To fly</label>
+      <br>
+      <input type="radio" name="ability" id="telekinesis" value="Telekinesis">
+      <label for="telekinesis">Telekinesis</label>
+      <br>
+      <input type="radio" name="ability" id="underwater" value="Underwater">
+      <label for="underwater">Breathe underwater</label>
+      <br>
+      <input type="radio" name="ability" id="invisible" value="Invisible">
+      <label for="invisible">Turn invisible</label>
+      <br>
+    </blockquote>
+    <img src="https://pa1.narvii.com/6384/4bb8874f144eab1aafa439e1f53ea09d9f62c9cb_hq.gif">
+    <br>
+    5) Which quality is most important to you?
+    <blockquote>
+      <input type="radio" name="quality" id="courage" value="Courage">
+      <label for="courage">Courage</label>
+      <br>
+      <input type="radio" name="quality" id="power" value="Power">
+      <label for="power">Power</label>
+      <br>
+      <input type="radio" name="quality" id="wisdom" value="Wisdom">
+      <label for="wisdom">Wisdom</label>
+      <br>
+      <input type="radio" name="quality" id="humor" value="Humor">
+      <label for="humor">Humor</label>
+      <br>
+    </blockquote>
+    <img src="http://static1.gamespot.com/uploads/original/402/4020844/2557233-7293465522-23306.gif">
+    <br>
+    6) Who/what must you protect?
+    <blockquote>
+      <input type="radio" name="protect" id="family" value="Family">
+      <label for="family">Your family</label>
+      <br>
+      <input type="radio" name="protect" id="friends" value="Friends">
+      <label for="friends">Your friends</label>
+      <br>
+      <input type="radio" name="protect" id="nation" value="Nation">
+      <label for="nation">Your nation</label>
+      <br>
+      <input type="radio" name="protect" id="master" value="Master">
+      <label for="master">Your master</label>
+      <br>
+    </blockquote>
+    <img src="http://38.media.tumblr.com/tumblr_m9s58cO3rr1rfqufmo1_500.gif">
+    <br>
+    7) How do you speak?
+    <blockquote>
+      <input type="radio" name="trait" id="formal" value="Formal">
+      <label for="formal">Formally</label>
+      <br>
+      <input type="radio" name="trait" id="sarcastic" value="Sarcastic">
+      <label for="sarcastic">Sarcastically</label>
+      <br>
+      <input type="radio" name="trait" id="casual" value="Casual">
+      <label for="casual">Casually</label>
+      <br>
+      <input type="radio" name="trait" id="sing" value="Sing">
+      <label for="sing">You sing</label>
+      <br>
+    </blockquote>
+    <img src="https://s-media-cache-ak0.pinimg.com/originals/ce/02/29/ce02290d0e1060d8d4449f5f78927d55.gif">
+    <br>
+    8) What is your favorite way to travel?
+    <blockquote>
+      <input type="radio" name="travel" id="plane" value="Plane">
+      <label for="plane">Airplane</label>
+      <br>
+      <input type="radio" name="travel" id="boat" value="Boat">
+      <label for="boat">Boat</label>
+      <br>
+      <input type="radio" name="travel" id="train" value="Train">
+      <label for="train">Train</label>
+      <br>
+      <input type="radio" name="travel" id="teleport" value="Teleport">
+      <label for="teleport">Teleport</label>
+      <br>
+    </blockquote>
+    <img src="http://images.eurogamer.net/2015/articles/1/8/3/8/8/4/3/we-played-zelda-breath-of-the-wild-four-times-and-still-didnt-see-it-all-146643902961.gif">
+    <br>
+    9) What is your favorite element?
+    <blockquote>
+      <input type="radio" name="element" id="water" value="Water">
+      <label for="water">Water</label>
+      <br>
+      <input type="radio" name="element" id="earth" value="Earth">
+      <label for="earth">Earth</label>
+      <br>
+      <input type="radio" name="element" id="air" value="Air">
+      <label for="air">Air</label>
+      <br>
+      <input type="radio" name="element" id="fire" value="Fire">
+      <label for="fire">Fire</label>
+      <br>
+    </blockquote>
+    <img src="https://i.pinimg.com/originals/27/36/3d/27363da5f9d6b4967007fe51bbd25cfd.jpg">
+    <br>
+    10) What are you?
+    <blockquote>
+      <input type="radio" name="race" id="human" value="Human">
+      <label for="human">A human</label>
+      <br>
+      <input type="radio" name="race" id="animal" value="Animal">
+      <label for="animal">An animal</label>
+      <br>
+      <input type="radio" name="race" id="creature" value="Creature">
+      <label for="creature">A mythical creature</label>
+      <br>
+      <input type="radio" name="race" id="object" value="Object">
+      <label for="object">A magically animated object</label>
+      <br>
+    </blockquote>
+    <br>
+
+    <input type="button" id="quizButton" value="Help the Hero!">
+  </form>
+    <div id= result><p id="resultArea"></p></div>
+</div>
+
+
+  <script>
+  // gain access to the quiz button and wait for a click
+  var button = document.getElementById("quizButton");
+  button.onclick = checkQuiz;
+
+  function checkQuiz() {
+    var fiScore = 0;
+    var midnaScore = 0;
+    var kingScore = 0;
+    var naviScore = 0;
+    var tatlScore = 0;
+    var zeldaScore = 0;
+    var skipped = false;
+
+    console.log("Button pressed!");
+
+    //Question 1
+    var gender;
+    inputs = document.getElementsByName("gender");
+
+    gender = findValue(inputs);
+    document.getElementById("resultArea").innerHTML = gender;
+
+    switch(gender)
+    {
+      case "Male":
+        kingScore ++;
+        break;
+      case "Female":
+        midnaScore ++;
+        zeldaScore ++;
+        break;
+      case "Non-binary":
+        fiScore ++;
+        break;
+      case "No Id":
+        naviScore ++;
+        tatlScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 2
+    var color;
+    var inputs = document.getElementsByName("color");
+
+    color = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + color;
+
+    switch(color)
+    {
+      case "Red":
+        kingScore ++;
+        zeldaScore ++;
+        break;
+      case "Blue":
+        naviScore ++;
+        break;
+      case "Yellow":
+        midnaScore ++;
+        tatlScore ++;
+        break;
+      case "Purple":
+        fiScore ++;
+        break;
+      default:
+      skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 3
+    var attention;
+    inputs = document.getElementsByName("attention");
+
+    attention = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + attention;
+
+    switch(attention)
+    {
+      case "Looks":
+        zeldaScore ++;
+        break;
+      case "Giggles":
+        midnaScore ++;
+        break;
+      case "Talking":
+        kingScore ++;
+        fiScore ++;
+        break;
+      case "Yelling":
+        naviScore ++;
+        tatlScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 4
+    var ability;
+    inputs = document.getElementsByName("ability");
+
+    ability = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + ability;
+
+    switch(ability)
+    {
+      case "Fly":
+        naviScore ++;
+        tatlScore ++;
+        fiScore ++;
+        break;
+      case "Telekinesis":
+        midnaScore ++;
+        break;
+      case "Underwater":
+        kingScore ++;
+        break;
+      case "Invisible":
+        zeldaScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 5
+    var quality;
+    inputs = document.getElementsByName("quality");
+
+    quality = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + quality;
+
+    switch(quality)
+    {
+      case "Courage":
+        naviScore ++;
+        tatlScore ++;
+        break;
+      case "Power":
+        kingScore ++;
+        break;
+      case "Wisdom":
+        zeldaScore ++;
+        fiScore ++;
+        break;
+      case "Humor":
+        midnaScore ++;
+        break;
+      default:
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 6
+    var protect;
+    inputs = document.getElementsByName("protect");
+
+    protect = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + protect;
+
+    switch(protect)
+    {
+      case "Family":
+        kingScore ++;
+        break;
+      case "Friends":
+        tatlScore ++;
+        break;
+      case "Nation":
+        zeldaScore ++;
+        midnaScore ++;
+        break;
+      case "Master":
+        naviScore ++;
+        fiScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 7
+    var trait;
+    inputs = document.getElementsByName("trait");
+
+    trait = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + trait;
+
+    switch(trait)
+    {
+      case "Formal":
+        kingScore ++;
+        break;
+      case "Sarcastic":
+        tatlScore ++;
+        midnaScore ++;
+        break;
+      case "Casual":
+        zeldaScore ++;
+        naviScore ++;
+        break;
+      case "Sing":
+        fiScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 8
+    var travel;
+    inputs = document.getElementsByName("travel");
+
+    travel = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + travel;
+
+    switch(travel)
+    {
+      case "Plane":
+        naviScore ++;
+        tatlScore ++;
+        break;
+      case "Boat":
+        kingScore ++;
+        break;
+      case "Train":
+        zeldaScore ++;
+        break;
+      case "Teleport":
+        fiScore ++;
+        midnaScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 9
+    var element;
+    inputs = document.getElementsByName("element");
+
+    element = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + element;
+
+    switch(element)
+    {
+      case "Water":
+        kingScore ++;
+        break;
+      case "Earth":
+        tatlScore ++;
+        break;
+      case "Air":
+        naviScore ++;
+        fiScore ++;
+        break;
+      case "Fire":
+        zeldaScore ++;
+        midnaScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    //Question 10
+    var race;
+    inputs = document.getElementsByName("race");
+
+    race = findValue(inputs);
+    document.getElementById("resultArea").innerHTML += " " + race;
+
+    switch(race)
+    {
+      case "Human":
+        zeldaScore ++;
+        break;
+      case "Animal":
+        midnaScore ++;
+        break;
+      case "Creature":
+        naviScore ++;
+        tatlScore ++;
+        break;
+      case "Object":
+        kingScore ++;
+        fiScore ++;
+        break;
+      default:
+        skipped = true;
+        document.getElementById("resultArea").innerHTML = "<br>It's dangerous to go alone\; please answer all questions.<br>"
+    }
+    var image = document.createElement("img");
+    var imageArea = document.getElementById("resultArea");
+if (!skipped)
+{
+    if ((fiScore >= midnaScore) &&
+        (fiScore >= kingScore) &&
+        (fiScore >= naviScore) &&
+        (fiScore >= tatlScore) &&
+        (fiScore >= zeldaScore))
+        {
+          image.src = "https://78.media.tumblr.com/37375f7a0818e37864c142c32e68c20e/tumblr_omkgct8L8M1tuu1a5o1_r3_540.gif";
+          document.getElementById("resultArea").innerHTML = "You are Fi! Named after the raised fourth of the solfege, you are a gifted vocalist and an amazing dancer." +
+          "You are beautiful and very loyal to those you hold in high esteem. You are very intelligent and know pretty much anything about pretty much everything." +
+          "You are also great at looking for lost things.";
+        }
+    else if ((midnaScore >= fiScore) &&
+      (midnaScore >= kingScore) &&
+      (midnaScore >= naviScore) &&
+      (midnaScore >= tatlScore) &&
+      (midnaScore >= zeldaScore))
+      {
+        image.src = "http://78.media.tumblr.com/7af185826ea2f352d2d364015f988836/tumblr_nccruoaHSC1runiejo2_500.gif";
+        document.getElementById("resultArea").innerHTML = "You are Midna! You are playfully mischievous and have an amazing sense of humor. You are somewhat cynical," +
+        "but that adds to your charm. You are not a fan of light and love to be in the dark as often as possible. You have strong loyalty to your home and the people" +
+        "there and would do anything for them.";
+      }
+    else if ((kingScore >= fiScore) &&
+      (kingScore >= midnaScore) &&
+      (kingScore >= naviScore) &&
+      (kingScore >= tatlScore) &&
+      (kingScore >= zeldaScore))
+      {
+        image.src = "https://pa1.narvii.com/6482/f0a19c557ffac4e7511e4f1e68f0c00d8767fe05_hq.gif";
+        document.getElementById("resultArea").innerHTML = "You are the King of Red Lions! Despite your outward appearance, you are very caring and well-spoken. " +
+        "You are strong, sturdy and very well-groomed. You care a lot for your friends and family and will go to the ends of the Earth for them. You are a little" +
+        " stubborn at times, but you always know when it's time to sit back and just let the wind take you to where you need to go.";
+      }
+    else if ((naviScore >= fiScore) &&
+      (naviScore >= midnaScore) &&
+      (naviScore >= kingScore) &&
+      (naviScore >= tatlScore) &&
+      (naviScore >= zeldaScore))
+      {
+        image.src = "https://pa1.narvii.com/6530/7a89598a671cb491660533586f530b9760b96606_hq.gif";
+        document.getElementById("resultArea").innerHTML = "You are Navi! You are very outgoing and stand by your friends at all times. You have the heart of a" +
+        " child and love learning and exploring. You are very loud and a little annoying at times, but you are still very much loved. You are quite intelligent " +
+        "and will never lead your friends astray.";
+      }
+    else if ((tatlScore >= fiScore) &&
+      (tatlScore >= midnaScore) &&
+      (tatlScore >= kingScore) &&
+      (tatlScore >= naviScore) &&
+      (tatlScore >= zeldaScore))
+      {
+        image.src = "http://24.media.tumblr.com/tumblr_magweqnxgP1rgj5rjo1_r1_500.gif";
+        document.getElementById("resultArea").innerHTML = "You are Tatl! You are fun-loving and adventurous and will do anything for your friends. You are" +
+        " emotionally intelligent and will always do your best to help those in need. You are soft-spoken, but you are the first to alert someone of any issues." +
+        "Being a wallflower, you are very observant and know a lot about your surroundings and those within.";
+      }
+    else
+      {
+        image.src = "https://78.media.tumblr.com/93afd8825267e9b0ac52f7ac3d233d81/tumblr_ofw78jjbwB1tgaauho2_540.gif";
+        document.getElementById("resultArea").innerHTML = "You are Zelda! Named after those that came before, you are very in tune with your spiritual upbringing" +
+        " and family history. You are beautiful and caring and are a role model for friends and family alike. You are stubborn and will not take \"no\" for an answer when it" +
+        " comes to the safety of those you care about; you will even take matters into your own hands if necessary.";
+      }
+  }
+  imageArea.appendChild(image);
+}
+  function findValue(inputs)
+  {
+    var checkedValue;
+
+    for (var i=0; i<inputs.length; i++)
+    {
+      if (inputs[i].checked)
+      {
+        checkedValue = inputs[i].value;
+        console.log(checkedValue);
+      }
+    }
+    return checkedValue;
+  }
+  </script>
+</body>
+</html>

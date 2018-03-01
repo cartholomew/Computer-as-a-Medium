@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Mastermind</title>
+<script>
+  var secret = 'ABCDEF';
+  function init(){
+    var button = document.getElementById('startButton');
+    button.onclick = myButtonClick;
+  }
+  function myButtonClick() {
+
+    var userTry = document.getElementById('userGuess').value;
+    var ul = document.getElementById('guessList');
+    var li = document.createElement('li');
+    for (var i=0; i< secret.length; i++) {
+      var found = false;
+      //if our code and guess are a match, display letter in green
+      if ((userTry.charAt(i))===(secret.charAt(i))) {
+        li.innerHTML += userTry.charAt(i).fontcolor('green');
+        found = true;
+      }
+
+      //if character is in the code but in the wrong place
+      else{
+        for (var x=0; x< secret.length; x++) {
+          if ((userTry.charAt(i))===(secret.charAt(x))){
+            li.innerHTML += userTry.charAt(i).fontcolor('red');
+            found = true;
+          }
+        }
+      }
+
+      //need to show user character is totally wrong
+      if (found === false) {
+        li.innerHTML += userTry.charAt(i).fontcolor('black');
+      }
+    }
+    ul.appendChild(li);
+  }
+  window.onload = init;
+</script>
+</head>
+<body>
+  <form>
+    <input type="text" id="userGuess" size="15" placeholder="Your Guess">
+    <input type="button" id="startButton" value="Guess the Code">
+  </form>
+  <ul id="guessList">
+  </ul>
+</body>
+</html>

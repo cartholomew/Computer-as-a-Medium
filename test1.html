@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Mad Libs</title>
+</head>
+<body>
+  <script>
+    var suppliedWords = [];
+    var prompts = ["a noun", "a verb ending in ing.", "a noun"];
+    var ourWords = ["The day had just begun, but the ", " was already ", ". What a bad "];
+
+    for ( var i=0; i<prompts.length; i++)
+    {
+      var word = prompt("Please provide " + prompts[i]);
+      suppliedWords.push(word);
+      document.write(ourWords[i] + suppliedWords[i]);
+    }
+
+  /*  var word = prompt("Please provide a time of day.");
+    suppliedWords.push(word);
+
+    word = prompt("Please provide a Holiday.");
+    suppliedWords.push(word);
+
+    word = prompt("Please provide a location.");
+    suppliedWords.push(word);
+
+    word = prompt("Please provide a vague noun.");
+    suppliedWords.push(word);
+
+    word = prompt("Please provide a noun.");
+    suppliedWords.push(word);
+
+    document.write("Twas the" + suppliedWords[0] + " before " + suppliedWords[1] + " and all through the " + suppliedWords[2] + " not a " + suppliedWords[3] + " was stirring; not even a " + suppliedWords[4]);
+  */
+  </script>
+</body>
+</html>
